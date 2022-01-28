@@ -1,6 +1,11 @@
 *{
     margin:0;
     padding:0;
+    font-family: 'Noto Sans', sans-serif;
+    text-decoration:none;
+}
+body{
+    background-color:#eee;
 }
 .container{
     max-width:1100px;
@@ -10,7 +15,7 @@ header{
     background-color:#212121;
     overflow:hidden;
 }
-header img{
+header img,footer img{
     height:30px;
     margin:10px 0;
     filter:invert(100%);
@@ -18,6 +23,18 @@ header img{
 .menu{
     /* background-color:aquamarine; */
     float:left;
+}
+.logo{
+    /* background-color:plum; */
+    display:block;
+    overflow:hidden;
+    float:left;
+    padding-left:10px;
+    padding-right:10px;
+    transition:0.4s;
+}
+.logo:hover{
+    background-color:rgb(44, 44, 44);
 }
 .logo img{
     display:block;
@@ -67,25 +84,345 @@ header img{
     line-height:30px;
     margin-top:10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.menu nav{
+    position:absolute;
+    background-color:#212121;
+    transform:translateY(-100%);
+    transition:0.4s;
+    opacity:0;
+    border-radius:0 0 5px 5px;
+}
+.mainButton{
+    z-index:999;
+    position:relative;
+    background-color:#212121;
+}
+.menu li:hover nav{
+    transform:translateY(0%);
+    opacity:1;
+}
+.slide:first-child{
+    background-image:url("slider (2).jpg");
+}
+.slide:nth-child(2){
+    background-image:url("slider (3).jpg");
+}
+.slide:nth-child(3){
+    background-image:url("slider (1).jpg");
+}
+.slide h2{
+    color:white;
+    text-shadow:0 0 10px black;
+    line-height:40px;
+    font-size:50px;
+    width:600px;
+    margin:40px 0;
+    white-space:normal;
+}
+.slide{
+    overflow:hidden;
+    /* float:left; */
+    width:100%;
+    display:inline-block;
+    background-size:cover;
+    background-position:center;
+}
+.slide p{
+    color:white;
+    text-shadow:0 0 10px black;
+    /* line-height:40px; */
+    font-size:20px;
+    width:500px;
+    margin:40px 0;
+    background:rgba(0, 0, 0, 0.829);
+    border-radius:3px;
+    padding:15px;
+    white-space:normal;
+}
+.slide a{
+    color:#212121d7;
+    background:white;
+    border-radius:20px;
+    /* width:80px; */
+    display:inline-block;
+    padding:0 30px;
+    line-height:40px;
+    text-decoration:none;
+    font-size:24px;
+    margin:0 0 40px;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.452);
+    transition:0.4s;
+}
+.slide a:hover{
+    transform:scale(1.05);
+}
+.slider{
+    white-space:nowrap;
+    font-size:0;
+    transition:0.4s;
+    /* transform:translateX(100%); */
+}
+.sliderContainer{
+    overflow:hidden;
+}
+.sliderButtons{
+    /* background-color:plum; */
+    font-size:0;
+    text-align:center;
+}
+.sliderButtons a{
+    background-color:white;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.452);
+    display:inline-block;
+    padding-left:40px;
+    padding-right:40px;
+    border-radius:50px;
+    /* font-size:0; */
+    text-align:center;
+    transform:translateY(-50%);
+    margin:0 5px;
+    transition:0.4s;
+}
+.sliderButtons img{
+    height:50px;
+    width:20px;
+    object-fit:contain;
+    /* background-color:brown; */
+    opacity:0.5;
+    transition:0.4s;
+}
+.sliderButtons a:hover{
+    transform:translateY(-60%);
+}
+.sliderButtons a:hover img{
+    opacity:0.8;
+}
+#sliderBack img{
+    transform:rotate(180deg);
+}
+.flat img{
+    display:block;
+}
+.flat{
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.452);
+    overflow:hidden;
+    display:inline-block;
+    background-color:white;
+    border-radius:5px;
+    width:25%;
+    margin:5px;
+    margin-top:0;
+    margin-bottom:25px;
+    text-align:left;
+    transition:0.4s;
+}
+.flat:hover{
+    transform:scale(1.02);
+}
+.flat>img{
+    width:100%;
+    height:253px;
+    object-fit:cover;
+}
+.flatInfo{
+    padding:5px;
+}
+.flatInfo h5{
+    font-size:20px;
+    color:#222;
+}
+.flatInfo div{
+    /* background-color:tomato; */
+    float:left;
+    margin-right:15px;
+}
+.flatInfo img{
+    float:left;
+    height:40px;
+    width:20px;
+    object-fit:contain;
+    margin-right:5px;
+}
+.flatInfo p{
+    float:left;
+    line-height:40px;
+    color:#999;
+}
+.zaZagolovok{
+    text-align:center;
+    font-size:35px;
+    margin-bottom:50px;
+}
+.flats{
+    text-align:center;
+}
+.pairs{
+    height:200px;
+}
+.pair{
+    overflow:hidden;
+    position:absolute;
+    width:100%;
+    opacity:0;
+    transform:scale(0.95);
+    transition:0.2s;
+}
+.activePair{
+    opacity:1;
+    transform:scale(1);
+}
+.comment{
+    background-color:white;
+    overflow:hidden;
+    float:left;
+    width:calc(50% - 10px);
+    margin:5px;
+    padding:15px;
+    box-sizing:border-box;
+    border-radius:5px;
+}
+.comment img{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    border-radius:50px;
+    float:left;
+    margin-right:5px;
+}
+.comment div{
+    float:left;
+    line-height:25px;
+    padding-top:10px;
+}
+.comment>p{
+    height:60px;
+    line-height:30px;
+    margin-bottom:15px;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
+#commentBack img{
+    transform:rotate(180deg);
+}
+footer{
+    background-color:#212121;
+    overflow:hidden;
+    padding:45px 0;
+}
+.footerRight{
+    float:right;
+}
+.location{
+    color:white;
+    float:left;
+    padding:0 15px;
+}
+.footerRight img{
+    float:left;
+    margin-right:5px;
+    display:block;
+}
+.footerContacts{
+    float:right;
+    /* background-color:tomato; */
+}
+.footerRight p{
+    float:left;
+    line-height:50px;
+}
+.footerContacts>a{
+    display:block;
+    color:white;
+    padding:0 15px;
+    overflow:hidden;
+}
+.footerRight a{
+    transition:0.4s;
+}
+.footerRight a:hover{
+    background-color:rgb(44, 44, 44);
+}
+.social{
+    /* background-color:aqua; */
+    overflow:hidden;
+    width:100%;
+}
+.social a{
+    display:block;
+    overflow:hidden;
+    float:left;
+    width:25%;
+    text-align:center;
+}
+.social img{
+    margin:auto;
+    float:none;
+    height:50px;
+    width:25px;
+    object-fit:contain;
+}
+@media(max-width:600px){
+    .menu{
+        display:none;
+    } 
+    .menuRight{
+        display:none;
+    } 
+    .logo{
+        float:none;
+    }
+    .logo img{
+        margin:10px auto;
+        float:none;
+    }
+    #triPoloski{
+        background-color:plum;
+        height:50px;
+        width:50px;
+        display:block;
+        position:absolute;
+        left:0;
+        top:0;
+    }
+    #triPoloski span{
+        height:2px;
+        width:60%;
+        background-color:black;
+        position:absolute;
+        bottom:50%;
+        left:20%;
+        /* right:20%; */
+        transform:translateY(1px);
+    }
+    #triPoloski span::after{
+        content:"";
+        height:2px;
+        width:100%;
+        background-color:black;
+        position:absolute;
+        bottom:50%;
+        left:0;
+        /* right:20%; */
+        top:8px;
+        transform:translateY(1px);
+    }
+    #triPoloski span::before{
+        content:"";
+        height:2px;
+        width:100%;
+        background-color:black;
+        position:absolute;
+        bottom:50%;
+        left:0;
+        /* right:20%; */
+        top:-10px;
+        transform:translateY(1px);
+    }
+    #priviazka{
+        position:absolute;
+        left:0;
+        top:0;
+    }
+}
