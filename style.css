@@ -365,8 +365,27 @@ footer{
 }
 @media(max-width:600px){
     .menu{
+        position:absolute;
+        width:100%;
+        background-color:#212121;
+        height:calc(100% - 50px);
+        position:fixed;
+        transform:translateX(-100%);
+        transition:0.4s;
+    }
+    nav{
         display:none;
-    } 
+    }
+    .menu li{
+        float:none;
+        padding:0;
+    }
+    header{
+        position:fixed;
+        width:100%;
+        z-index:1;
+        top:0;
+    }
     .menuRight{
         display:none;
     } 
@@ -378,7 +397,7 @@ footer{
         float:none;
     }
     #triPoloski{
-        background-color:plum;
+        background-color:#212121;
         height:50px;
         width:50px;
         display:block;
@@ -389,40 +408,107 @@ footer{
     #triPoloski span{
         height:2px;
         width:60%;
-        background-color:black;
+        background-color:white;
         position:absolute;
         bottom:50%;
         left:20%;
         /* right:20%; */
         transform:translateY(1px);
+        transition:0.4s;
     }
     #triPoloski span::after{
         content:"";
         height:2px;
         width:100%;
-        background-color:black;
+        background-color:white;
         position:absolute;
         bottom:50%;
         left:0;
         /* right:20%; */
         top:8px;
         transform:translateY(1px);
+        transition:0.4s;
     }
     #triPoloski span::before{
         content:"";
         height:2px;
         width:100%;
-        background-color:black;
+        background-color:white;
         position:absolute;
         bottom:50%;
         left:0;
         /* right:20%; */
         top:-10px;
         transform:translateY(1px);
+        transition:0.4s;
     }
     #priviazka{
         position:absolute;
         left:0;
         top:0;
+    }
+    #priviazka:checked ~ .menu{
+        transform:translateX(0%);
+    }
+    #priviazka:checked ~ #triPoloski span{
+        transform:rotate(225deg);
+    }
+    #priviazka:checked ~ #triPoloski span::before{
+        opacity:0;
+    }
+    #priviazka:checked ~ #triPoloski span::after{
+        transform:rotate(-90deg);
+        top:0;
+    }
+    .sliderContainer{
+        margin-top:50px;
+    }
+    .slide h2{
+        font-size:30px;
+        width:90%;
+        margin:40px auto;
+        text-align:left;
+        line-height:25px;
+    }
+    .slide p{
+        margin:40px auto;
+        text-align:left;
+        box-sizing:border-box;
+        width:90%;
+        font-size:14px;
+        /* .slide a{
+            text-align:center;
+        } */
+    }
+    .slide{
+        text-align:center;
+    }
+    .flat{
+        width:auto;
+        display:block;
+    }
+    .comment{
+        width:auto;
+        float:none;
+        margin:20px 0;
+    }
+    .pairs{
+        height:430px;
+    }
+    .location{
+        float:none;
+        text-align:center;
+        display:inline-block;
+        overflow:hidden;
+    }
+    .footerRight {
+        float:none;
+    }
+    footer{
+        text-align:center;
+    }
+    .footerContacts{
+        float:none;
+        display:inline-block;
     }
 }
