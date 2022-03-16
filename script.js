@@ -5,6 +5,8 @@ let distance=0;
 let bibika=0;
 let commentNext=document.getElementById("commentNext")
 let commentBack=document.getElementById("commentBack")
+let callMe=document.getElementsByClassName("callMe")[1]
+let modal=document.getElementsByClassName("modal")[0]
 sliderNext.onclick=function(){
     bibika=bibika+1
     distance=distance+100
@@ -22,11 +24,11 @@ sliderBack.onclick=function(){
     }
     slider.style.transform="translateX(-"+distance+"%)"
 }
-commentNext.onclick=function() {
+commentNext.onclick=function(){
     console.log("biboba");
     let activePair=document.getElementsByClassName("activePair")[0];
     let nextPair;
-    if (activePair.nextElementSibling) {
+    if (activePair.nextElementSibling){
         nextPair=activePair.nextElementSibling
     }
     else{
@@ -34,11 +36,11 @@ commentNext.onclick=function() {
     }
     console.log(activePair,nextPair);
     activePair.classList.remove("activePair")
-    setTimeout(function () {
-        nextPair.classList.add("activePair")
+    setTimeout(function (){
+    nextPair.classList.add("activePair")
     },200)
 }
-commentBack.onclick=function() {
+commentBack.onclick=function(){
     console.log("biboba");
     let activePair=document.getElementsByClassName("activePair")[0];
     let prevPair;
@@ -51,6 +53,19 @@ commentBack.onclick=function() {
     console.log(activePair,prevPair);
     activePair.classList.remove("activePair")
     setTimeout(function () {
-        prevPair.classList.add("activePair")
+    prevPair.classList.add("activePair")
     },200)
+}
+callMe.onclick=function(){
+    console.log("НЕ звоните мнЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕ");
+    callRequest()
+}
+function callRequest(){
+    modal.style.transform="translateY(0%)"
+}
+modal.onclick=function (){
+    modal.style.transform="translateY(-100%)"
+}
+modal.children[0].onclick=function(event){
+    event.stopPropagation();
 }

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lermontov Street, 275 building 8</title>
+    <link rel="stylesheet" href="flat.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="modal">
+        <form action="">
+            <h2>Заказать обратный звонок</h2>
+            <input type="text" placeholder="ПИШИИМЯ">
+            <input type="text" placeholder="ПИШИНОМЕР">
+            <button>Перезвоните мне!</button>
+        </form>
+    </div>
+    <header>
+        <div class="container">
+            <a href="" class="logo">
+                <img src="modern-house.png" alt="">
+            </a>
+            <input type="checkbox" id="priviazka">
+            <label for="priviazka" id="triPoloski">
+                <span></span>
+            </label>
+            <ul class="menu">
+                <li>
+                    <a href="" class="mainButton">Flats</a>
+                    <nav>
+                        <a href="">Apartments</a>
+                        <a href="">Cottages</a>
+                        <a href="">Townhouses</a>
+                        <a href="">One room flats</a>
+                    </nav>
+                </li>
+                <li>
+                    <a href="" class="mainButton">Feedback</a>
+                </li>
+                <li>
+                    <a href="" class="mainButton">About</a>
+                </li>
+                <li>
+                    <a href="#/" class="callMe" onclick="callRequest()">Call me</a>
+                </li>
+            </ul>
+            <div class="menuRight">
+                <a href="">
+                    <img src="phone.png" alt="">
+                    <p>8 (800) 228 9174</p>
+                </a>
+                <a href="#/" class="callMe">Call me</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h3 class="zaZagolovok">Lermontov Street, 275 building 8</h3>
+            <div class="flatGallery" id="flatGallery">
+                <img src="flat2 (1).jpg" alt="" id="flatImage1">
+                <img src="flat2 (2).jpg" alt="" id="flatImage2">
+                <img src="flat2 (3).jpg" alt="" id="flatImage3">
+                <img src="flat2 (4).jpg" alt="" id="flatImage4">
+                <img src="flat2 (5).jpg" alt="" id="flatImage5">
+            </div>
+            <div class="flatInfo">
+                <h3>1000$/1 hour</h3>
+                <a href="">Check availability!</a>
+                <p>In the heart of Irkutsk, enjoy a magnificent apartment with stunning views of the gardens and rooftops of Hôpital Saint-Louis.Ideal for a romantic weekend, this little nest will bring you the entire atmosphere of the City of Light.</p>
+                <p>Nice comfortable apartment close to the Etoile and Champs Elysées, close to Poncelet market, minutes from the metro and local shops. Chic, peaceful and elegant neighborhood.</p>
+                <ul>
+                    <li>
+                        <img src="user.png" alt="">
+                        <p>2 guests</p>
+                        <img src="bed.png" alt="">
+                        <p>1 beds</p>
+                    </li>
+                    <li>
+                        <img src="markIcon.svg" alt="">
+                        <p>We dont know what to write.Sorry/:(/</p>
+                    </li>
+                    <li>
+                        <img src="markIcon.svg" alt="">
+                        <p>Very big Mirror, aquarium, wifi, VR</p>
+                    </li>
+                </ul>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2442.549264838759!2d104.26996281576518!3d52.251570179764265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5da83cb6796789e5%3A0x87714fe084041203!2z0YPQuy4g0JvQtdGA0LzQvtC90YLQvtCy0LAsIDI3NSwg0JjRgNC60YPRgtGB0LosINCY0YDQutGD0YLRgdC60LDRjyDQvtCx0LsuLCA2NjQwMzM!5e0!3m2!1sru!2sru!4v1646996122595!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <a href="" class="logo">
+                <img src="modern-house.png" alt="">
+            </a>
+            <ul class="menu">
+                <li>
+                    <a href="" class="mainButton">Flats</a>
+                </li>
+                <li>
+                    <a href="" class="mainButton">Feedback</a>
+                </li>
+                <li>
+                    <a href="" class="mainButton">About</a>
+                </li>
+            </ul>
+            <div class="footerRight">
+                <a href="" class="location">
+                    <img src="location.png" alt="">
+                    <p>Иркутск,ул. Лермонтова,275Б</p>
+                </a>
+                <div class="footerContacts">
+                    <a href="">
+                        <img src="phone.png" alt="">
+                        <p>8 (800) 228 9174</p>
+                    </a>
+                    <div class="social">
+                        <a href="">
+                            <img src="github.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="telegram.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="email.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="viber.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let map=document.getElementsByTagName("iframe")[0]
+        let flatGallery =document.getElementById("flatGallery")
+        let flatInfo = document.getElementsByClassName("flatInfo")[0]
+        map.style.height = flatGallery.offsetHeight - flatInfo.offsetHeight -20 + "px"
+
+    </script>
+</body>
+
+</html>
