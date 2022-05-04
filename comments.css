@@ -1,3 +1,37 @@
 .left{
-    background-color:aqua;
+    /* background-color:blue; */
+    float:left;
+    box-sizing:border-box;
+    width:50%;
+}
+.right{
+    /* background-color:yellow; */
+    float:right;
+    box-sizing:border-box;
+    width:50%;
+}
+.comment{
+    float:none;
+    width:auto;
+    margin:10px;
+}
+.comment>p{
+    height:auto;
+    -webkit-line-clamp:none;
+    display:block;
+}
+main{
+    padding-top:50px;
+    padding-bottom:50px;
+    overflow:hidden;
+}
+@media(max-width:600px){
+    .left{
+        float:none;
+        width:100%;
+    }
+    .right{
+        float:none;
+        width:100%;
+    }
 }

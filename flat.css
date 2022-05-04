@@ -83,3 +83,7 @@ iframe{
 iframe:hover{
     filter:grayscale(0%);
 }
+ol li{
+    list-style-type:decimal !important;
+    list-style-position:inside !important;
+}

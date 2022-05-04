@@ -5,8 +5,6 @@ let distance=0;
 let bibika=0;
 let commentNext=document.getElementById("commentNext")
 let commentBack=document.getElementById("commentBack")
-let callMe=document.getElementsByClassName("callMe")[1]
-let modal=document.getElementsByClassName("modal")[0]
 sliderNext.onclick=function(){
     bibika=bibika+1
     distance=distance+100
@@ -55,17 +53,4 @@ commentBack.onclick=function(){
     setTimeout(function () {
     prevPair.classList.add("activePair")
     },200)
-}
-callMe.onclick=function(){
-    console.log("НЕ звоните мнЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕ");
-    callRequest()
-}
-function callRequest(){
-    modal.style.transform="translateY(0%)"
-}
-modal.onclick=function (){
-    modal.style.transform="translateY(-100%)"
-}
-modal.children[0].onclick=function(event){
-    event.stopPropagation();
 }

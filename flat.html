@@ -24,7 +24,7 @@
     </div>
     <header>
         <div class="container">
-            <a href="" class="logo">
+            <a href="/" class="logo">
                 <img src="modern-house.png" alt="">
             </a>
             <input type="checkbox" id="priviazka">
@@ -42,7 +42,7 @@
                     </nav>
                 </li>
                 <li>
-                    <a href="" class="mainButton">Feedback</a>
+                    <a href="comments.html" class="mainButton">Feedback</a>
                 </li>
                 <li>
                     <a href="" class="mainButton">About</a>
@@ -56,7 +56,7 @@
                     <img src="phone.png" alt="">
                     <p>8 (800) 228 9174</p>
                 </a>
-                <a href="#/" class="callMe">Call me</a>
+                <a href="#/" class="callMe" onclick="callRequest()">Call me</a>
             </div>
         </div>
     </header>
@@ -99,7 +99,7 @@
     </main>
     <footer>
         <div class="container">
-            <a href="" class="logo">
+            <a href="/" class="logo">
                 <img src="modern-house.png" alt="">
             </a>
             <ul class="menu">
@@ -107,7 +107,7 @@
                     <a href="" class="mainButton">Flats</a>
                 </li>
                 <li>
-                    <a href="" class="mainButton">Feedback</a>
+                    <a href="comments.html" class="mainButton">Feedback</a>
                 </li>
                 <li>
                     <a href="" class="mainButton">About</a>
@@ -143,11 +143,11 @@
     </footer>
     <script>
         let map=document.getElementsByTagName("iframe")[0]
-        let flatGallery =document.getElementById("flatGallery")
-        let flatInfo = document.getElementsByClassName("flatInfo")[0]
-        map.style.height = flatGallery.offsetHeight - flatInfo.offsetHeight -20 + "px"
-
+        let flatGallery=document.getElementById("flatGallery")
+        let flatInfo=document.getElementsByClassName("flatInfo")[0]
+        map.style.height=flatGallery.offsetHeight-flatInfo.offsetHeight-20+"px"
     </script>
+    <script src="forAll.js"></script>
 </body>
 
 </html>

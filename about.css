@@ -1,0 +1,77 @@
+body{
+    background-color:white !important;
+}
+#paragraf{
+    border-left:1px solid black;
+    padding-left:20px;
+}
+.contactsLeft img{
+    height:50px;
+    width:25px;
+    object-fit:contain;
+}
+.contactsLeft{
+    background-color:white;
+    width:50%;
+    float:left;
+    padding:40px 20px;
+    box-sizing:border-box;
+}
+iframe{
+    float:right;
+    width:50%;
+}
+.contactsSection h5{
+    font-weight:normal;
+}
+.contactsLeft p{
+    padding:15px 0;
+    border-bottom:1px solid rgb(220, 220, 220);
+}
+.contactsSection{
+    background-color:#eee;
+    overflow:hidden;
+    padding-bottom:50px;
+}
+.person{
+    width:30%;
+    overflow:hidden;
+    display:inline-block;
+    text-align:left;
+    margin-bottom:15px;
+}
+.person img{
+    width:70px;
+    border-radius:100%;
+    float:left;
+    height:70px;
+    object-fit:cover;
+    margin-right:10px;
+}
+.person div{
+    float:left;
+}
+.person h5{
+    font-size:15px;
+}
+.personInfo img{
+    border-radius:0;
+    width:15px;
+    height:15px;
+    object-fit:cover;
+}
+.personInfo{
+    font-size:12px;
+}
+.post{
+    font-size:15px;
+    margin-bottom:7px;
+    color:#333;
+}
+.team{
+    text-align:center;
+    padding-bottom:45px;
+}
+.zaZagolovok{
+    margin-top:50px;
+}
